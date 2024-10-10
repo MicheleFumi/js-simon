@@ -16,35 +16,43 @@
     <div class="container py-4 text-center">
         <div id="number_cpu" class="fs-3"></div>
         <div id="number_user ">
-            <div id="input_form" class="row d-none">
+            <form id="input_form" class="row d-none">
                 <div class="col 1">
-                  <input id="value1" type="number" class="form-control" placeholder="First Number" aria-label="First name">
+                    <input id="value1" name="value1" type="number" class="form-control" placeholder="First Number"
+                        aria-label="First name">
                 </div>
 
                 <div class="col 2">
-                  <input id="value2" type="number" class="form-control" placeholder="Second Number" aria-label="Last name">
+                    <input id="value2" name="value2" type="number" class="form-control" placeholder="Second Number"
+                        aria-label="Last name">
                 </div>
 
                 <div class="col 3">
-                    <input id="value3" type="number" class="form-control" placeholder="Third Number" aria-label="Last name">
-                  </div>
+                    <input id="value3" name="value3" type="number" class="form-control" placeholder="Third Number"
+                        aria-label="Last name">
+                </div>
 
-                  <div class="col 4">
-                    <input id="value4" type="number" class="form-control" placeholder="Fourth Number" aria-label="Last name">
-                  </div>
-                  
-                  <div class="col 5">
-                    <input id="value5" type="number" class="form-control" placeholder="Fifth Number" aria-label="Last name">
-                  </div>
+                <div class="col 4">
+                    <input id="value4" name="value4" type="number" class="form-control" placeholder="Fourth Number"
+                        aria-label="Last name">
+                </div>
 
-              </div>
-           
-            
+                <div class="col 5">
+                    <input id="value5" name="value5" type="number" class="form-control" placeholder="Fifth Number"
+                        aria-label="Last name">
+                    </div>
+                </form>
+                
+                <form action="" id="button_form">
+                    
+                    <div class="py-5">
+                        <button type="submit">Simon Says</button>
+                        <button id="submit2" type="submit">Submit Values</button>
+                        <div id="tempo" class="py-4"></div>
+                    </div>
+            </form>
         </div>
-        <div class="py-5">
-            <button type="submit">Simon Says</button>
-            <div id="tempo" class="py-4"></div>
-        </div>
+
     </div>
 
 

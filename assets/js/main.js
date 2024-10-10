@@ -21,12 +21,15 @@ indica quali e quanti numeri ci sono in comune tra i due array" */
 
 
 let button = document.querySelector('button')
+let number_user = document.getElementById('number_user')
+let col = document.getElementById('input_form')
+
 
 //creo l'evento al click del bottone
-button.addEventListener("click", (e) => {
-
+ button.addEventListener("click", (e) => {
+    e.preventDefault()
     // creo l'array per i numeri randomici
-    cpu_array = [];
+    cpu_array = []; 
 
 
 
@@ -45,34 +48,30 @@ button.addEventListener("click", (e) => {
         tempo.innerHTML = `${second}`;
         second--;
         if (second <= -1) {
-            
+
             clearInterval(timer)
             tempo.innerHTML = "TIME IS OVER!";
             number_cpu = document.getElementById('number_cpu').classList.add('d-none');
-
-            let number_user = document.getElementById('number_user')
-            let row = document.getElementById('input_form')
-            row.classList.remove("d-none")
-
+            col.classList.remove("d-none")
 
         } else {
             // Altrimenti, aggiorna il timer visualizzato e decrementa i secondi
             tempo.innerHTML = `${second}`;
         }
-        
+
 
     }, 10); //RIMETTERE I SECONDI GIUSTI
 
     let input_time = setTimeout(() => {
 
 
-        
-       
-       
-        
-        
-        
-       
+
+
+
+
+
+
+
 
 
 
@@ -80,8 +79,30 @@ button.addEventListener("click", (e) => {
 
     //creo una variabile dove andranno inseriti i valori dall'utente
 
+ 
+
+
+
+ }) 
+
+ const formEL = document.querySelector('form')
+
+let button_form = document.getElementById('button_form')
 
 
 
 
-})
+    const value1 = document.getElementById('value1').value;
+    const value2 = document.getElementById('value2').value;
+    const value3 = document.getElementById('value3').value;
+    const value4 = document.getElementById('value4').value;
+    const value5 = document.getElementById('value5').value;
+    console.log("Value 1: ", value1);
+    console.log("Value 2: ", value2);
+    console.log("Value 3: ", value3);
+    console.log("Value 4: ", value4);
+    console.log("Value 5: ", value5);
+
+
+
+
