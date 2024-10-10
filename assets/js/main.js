@@ -43,15 +43,19 @@ button.addEventListener("click", (e) => {
 
         tempo.innerHTML = `${second}`;
         second--;
-        if (second == 0) {
+        if (second <= 0) {
             clearInterval(timer)
             tempo.innerHTML = "TIME IS OVER!";
+        } else{
+             // Altrimenti, aggiorna il timer visualizzato e decrementa i secondi
+             tempo.innerHTML = `${second}`;
+             second--;
         }
        
         
     }, 1000);
-
-   /*  let input_time = setTimeout(() => {
+/* 
+    let input_time = setTimeout(() => {
         user_array = []
 
             for (let i = 0; i < 5; i++) {
@@ -59,9 +63,9 @@ button.addEventListener("click", (e) => {
                 user_choice.push(user_array)
     
             }
-    }, 31000); */
+    }, 30000);
 
-
+ */
     //creo una variabile dove andranno inseriti i valori dall'utente
 
 
