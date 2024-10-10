@@ -27,7 +27,7 @@ button.addEventListener("click", (e) => {
 
     // creo l'array per i numeri randomici
     cpu_array = [];
-    
+    let second = 30;
 
     // creo il ciclo dei 5 numeri randomici 
     for (let i = 0; i < 5; i++) {
@@ -36,9 +36,9 @@ button.addEventListener("click", (e) => {
     // li loggo
     number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
 
-
+ // creo un timer per decrementare i secondi
     let timer = setInterval(() => {
-        let second = 30;
+       
         tempo.innerHTML = `${second}`;
         second --;
 
