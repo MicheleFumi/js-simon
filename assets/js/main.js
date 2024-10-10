@@ -15,3 +15,29 @@ Dividete in piccoli problemi la consegna.
 Individuate gli elementi di cui avete bisogno per realizzare il programma.
 Immaginate la logica come fosse uno snack: "Dati 2 array di numeri,
 indica quali e quanti numeri ci sono in comune tra i due array" */
+
+
+//creo 2 variabili linkate all html per il random dei numeri
+
+
+
+let number_user=document.getElementById('number_user')
+let button = document.querySelector('button')
+
+
+button.addEventListener("click", (e)=>{
+
+    
+    
+    cpu_array = [];
+
+   for (let i = 0; i < 5; i++) {
+    cpu_array.push(Math.floor(Math.random() * 100) + 1);
+   }
+    
+     number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
+   
+ 
+ 
+
+})
