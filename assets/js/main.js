@@ -29,7 +29,7 @@ button.addEventListener("click", (e) => {
     cpu_array = [];
 
 
-    let second = 30;
+
 
     // creo il ciclo dei 5 numeri randomici 
     for (let i = 0; i < 5; i++) {
@@ -38,34 +38,45 @@ button.addEventListener("click", (e) => {
     // li loggo
     number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
 
+    let second = 29;
     // creo un timer per decrementare i secondi
     let timer = setInterval(() => {
 
         tempo.innerHTML = `${second}`;
         second--;
-        if (second <= 0) {
+        if (second <= -1) {
             clearInterval(timer)
             tempo.innerHTML = "TIME IS OVER!";
-        } else{
-             // Altrimenti, aggiorna il timer visualizzato e decrementa i secondi
-             tempo.innerHTML = `${second}`;
-             second--;
+        } else {
+            // Altrimenti, aggiorna il timer visualizzato e decrementa i secondi
+            tempo.innerHTML = `${second}`;
         }
+
+
+    }, 10);
+
+    let input_time = setTimeout(() => {
+
+
+        let user_choice=[]
+
+       for (let i = 0; i < 5; i++) {
+        const user_number = Number(prompt(`ENTER THE NUMBER ${i}`))
+        user_choice.push(user-number)
+        
+        
+       }
+       
        
         
-    }, 1000);
-/* 
-    let input_time = setTimeout(() => {
-        user_array = []
+        
+        
+       
 
-            for (let i = 0; i < 5; i++) {
-                const user_choice = Number(prompt('ENTER THE NUMBER'))
-                user_choice.push(user_array)
-    
-            }
-    }, 30000);
 
- */
+
+    }, 30);
+
     //creo una variabile dove andranno inseriti i valori dall'utente
 
 
