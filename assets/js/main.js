@@ -19,25 +19,33 @@ indica quali e quanti numeri ci sono in comune tra i due array" */
 
 //creo 2 variabili linkate all html per il random dei numeri
 
-
-
-let number_user=document.getElementById('number_user')
+let number_user = document.getElementById('number_user')
 let button = document.querySelector('button')
 
+//creo l'evento al click del bottone
+button.addEventListener("click", (e) => {
 
-button.addEventListener("click", (e)=>{
-
-    
-    
+    // creo l'array per i numeri randomici
     cpu_array = [];
-
-   for (let i = 0; i < 5; i++) {
-    cpu_array.push(Math.floor(Math.random() * 100) + 1);
-   }
     
-     number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
-   
- 
- 
+
+    // creo il ciclo dei 5 numeri randomici 
+    for (let i = 0; i < 5; i++) {
+        cpu_array.push(Math.floor(Math.random() * 100) + 1);
+    }
+    // li loggo
+    number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
+
+
+    let timer = setInterval(() => {
+        let second = 30;
+        tempo.innerHTML = `${second}`;
+        second --;
+
+    }, 30000);
+
+
+
+
 
 })
