@@ -27,6 +27,7 @@ button.addEventListener("click", (e) => {
 
     // creo l'array per i numeri randomici
     cpu_array = [];
+
     let second = 30;
 
     // creo il ciclo dei 5 numeri randomici 
@@ -41,8 +42,12 @@ button.addEventListener("click", (e) => {
        
         tempo.innerHTML = `${second}`;
         second --;
+        if (second == -1) {
+            clearInterval(timer)
+            tempo.innerHTML = "TIME IS OVER!";
+        }
 
-    }, 30000);
+    }, 1000);
 
 
 
