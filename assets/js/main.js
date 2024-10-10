@@ -19,7 +19,7 @@ indica quali e quanti numeri ci sono in comune tra i due array" */
 
 //creo 2 variabili linkate all html per il random dei numeri
 
-let number_user = document.getElementById('number_user')
+
 let button = document.querySelector('button')
 
 //creo l'evento al click del bottone
@@ -45,27 +45,28 @@ button.addEventListener("click", (e) => {
         tempo.innerHTML = `${second}`;
         second--;
         if (second <= -1) {
+            
             clearInterval(timer)
             tempo.innerHTML = "TIME IS OVER!";
+            number_cpu = document.getElementById('number_cpu').classList.add('d-none');
+
+            let number_user = document.getElementById('number_user')
+            let row = document.getElementById('input_form')
+            row.classList.remove("d-none")
+
+
         } else {
             // Altrimenti, aggiorna il timer visualizzato e decrementa i secondi
             tempo.innerHTML = `${second}`;
         }
+        
 
-
-    }, 10);
+    }, 10); //RIMETTERE I SECONDI GIUSTI
 
     let input_time = setTimeout(() => {
 
 
-        let user_choice=[]
-
-       for (let i = 0; i < 5; i++) {
-        const user_number = Number(prompt(`ENTER THE NUMBER ${i}`))
-        user_choice.push(user-number)
         
-        
-       }
        
        
         
@@ -75,7 +76,7 @@ button.addEventListener("click", (e) => {
 
 
 
-    }, 30);
+    }, 30); //RIMETTERE I SECONDI GIUSTI
 
     //creo una variabile dove andranno inseriti i valori dall'utente
 
