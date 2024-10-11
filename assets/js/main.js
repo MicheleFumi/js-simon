@@ -106,13 +106,18 @@ button2.addEventListener('click', (event)=>{
     console.log(array_of_value);
     console.log(cpu_array);
     
-    
-    
-    if (array_of_value == cpu_array) {
-        alert("you win")
-    }else{
-        alert("you lose!")
+    for (let i = 0; i < cpu_array.length; i++) {
+        let includes = array_of_value[i].includes(cpu_array[i])
+
+        if (includes ==true) {
+            alert("you win")
+        }else{
+            alert("you lose!")
+        }
+        break;
     }
+    
+    
 
 })
 
