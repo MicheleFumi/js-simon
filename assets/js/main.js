@@ -87,7 +87,7 @@ let button2 =document.getElementById('submit2')
 
 let button_form = document.getElementById('button_form')
 
-button2.addEventListener('submit', (event)=>{
+button2.addEventListener('click', (event)=>{
     
     event.preventDefault()
 
@@ -108,7 +108,7 @@ button2.addEventListener('submit', (event)=>{
     
     
     
-    if (array_of_value === cpu_array) {
+    if (array_of_value == cpu_array) {
         alert("you win")
     }else{
         alert("you lose!")
