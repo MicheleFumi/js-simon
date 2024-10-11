@@ -50,7 +50,7 @@ let button2 =document.getElementById('submit2')
         if (second <= -1) {
 
             clearInterval(timer)
-            tempo.innerHTML = "TIME IS OVER!";
+            tempo.innerHTML = "INSERT THE NUMBERS!";
             number_cpu = document.getElementById('number_cpu').classList.add('d-none');
             col.classList.remove("d-none")
 
@@ -87,7 +87,7 @@ let button2 =document.getElementById('submit2')
 
 let button_form = document.getElementById('button_form')
 
-button.addEventListener('submit', (event)=>{
+button2.addEventListener('submit', (event)=>{
     
     event.preventDefault()
 
