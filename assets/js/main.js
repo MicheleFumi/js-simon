@@ -29,18 +29,13 @@ let col = document.getElementById('input_form')
  button.addEventListener("click", (e) => {
     e.preventDefault()
     // creo l'array per i numeri randomici
-    cpu_array = []; 
+   
 
 
 
 
     // creo il ciclo dei 5 numeri randomici 
-    for (let i = 0; i < 5; i++) {
-        cpu_array.push(Math.floor(Math.random() * 100));
-    }
-    // li loggo
-    number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
-
+   
     let second = 29;
     // creo un timer per decrementare i secondi
     let timer = setInterval(() => {
@@ -54,29 +49,27 @@ let col = document.getElementById('input_form')
             number_cpu = document.getElementById('number_cpu').classList.add('d-none');
             col.classList.remove("d-none")
 
+
         } else {
             // Altrimenti, aggiorna il timer visualizzato e decrementa i secondi
             tempo.innerHTML = `${second}`;
         }
+       
 
-
+        
     }, 10); //RIMETTERE I SECONDI GIUSTI
 
-    let input_time = setTimeout(() => {
+    cpu_array = []; 
+    for (let i = 0; i < 5; i++) {
+        cpu_array.push(Math.floor(Math.random() * 100));
+    }
+    // li loggo
+    number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
+  
+    
 
-
-
-
-
-
-
-
-
-
-
-
-    }, 30); //RIMETTERE I SECONDI GIUSTI
-
+   
+    
     //creo una variabile dove andranno inseriti i valori dall'utente
 
  
@@ -85,12 +78,15 @@ let col = document.getElementById('input_form')
 
  }) 
 
+
  const formEL = document.querySelector('form')
+
 
 let button_form = document.getElementById('button_form')
 
-
-
+button_form.addEventListener('submit', (event)=>{
+    
+    event.preventDefault()
 
     const value1 = document.getElementById('value1').value;
     const value2 = document.getElementById('value2').value;
@@ -102,6 +98,21 @@ let button_form = document.getElementById('button_form')
     console.log("Value 3: ", value3);
     console.log("Value 4: ", value4);
     console.log("Value 5: ", value5);
+
+     let array_of_value = [value1, value2, value3, value4, value5]
+    console.log(array_of_value);
+    console.log(cpu_array);
+    
+    
+    
+    if (array_of_value == number_cpu) {
+        alert= ("you win")
+    }else{
+        alert("you lose!")
+    }
+    
+})
+
 
 
 
