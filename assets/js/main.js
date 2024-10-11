@@ -23,6 +23,11 @@ indica quali e quanti numeri ci sono in comune tra i due array" */
 let button = document.querySelector('button')
 let number_user = document.getElementById('number_user')
 let col = document.getElementById('input_form')
+let button2 =document.getElementById('submit2')
+
+
+
+
 
 
 //creo l'evento al click del bottone
@@ -36,7 +41,7 @@ let col = document.getElementById('input_form')
 
     // creo il ciclo dei 5 numeri randomici 
    
-    let second = 29;
+    let second = 31;
     // creo un timer per decrementare i secondi
     let timer = setInterval(() => {
 
@@ -57,20 +62,18 @@ let col = document.getElementById('input_form')
        
 
         
-    }, 10); //RIMETTERE I SECONDI GIUSTI
+    }, 1000); //RIMETTERE I SECONDI GIUSTI
 
+   
     cpu_array = []; 
     for (let i = 0; i < 5; i++) {
         cpu_array.push(Math.floor(Math.random() * 100));
     }
     // li loggo
     number_cpu = document.getElementById('number_cpu').innerHTML = `${cpu_array}`;
-  
     
-
-   
     
-    //creo una variabile dove andranno inseriti i valori dall'utente
+    
 
  
 
@@ -84,7 +87,7 @@ let col = document.getElementById('input_form')
 
 let button_form = document.getElementById('button_form')
 
-button_form.addEventListener('submit', (event)=>{
+button.addEventListener('submit', (event)=>{
     
     event.preventDefault()
 
@@ -105,12 +108,12 @@ button_form.addEventListener('submit', (event)=>{
     
     
     
-    if (array_of_value == number_cpu) {
-        alert= ("you win")
+    if (array_of_value === cpu_array) {
+        alert("you win")
     }else{
         alert("you lose!")
     }
-    
+
 })
 
 
