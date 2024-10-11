@@ -62,7 +62,7 @@ let button2 =document.getElementById('submit2')
        
 
         
-    }, 1000); //RIMETTERE I SECONDI GIUSTI
+    }, 100); //RIMETTERE I SECONDI GIUSTI
 
    
     cpu_array = []; 
@@ -105,19 +105,21 @@ button2.addEventListener('click', (event)=>{
      let array_of_value = [value1, value2, value3, value4, value5]
     console.log(array_of_value);
     console.log(cpu_array);
-    
+    let win = true;
     for (let i = 0; i < cpu_array.length; i++) {
-        let includes = array_of_value[i].includes(cpu_array[i])
+        let includes = array_of_value[i]
 
-        if (includes ==true) {
-            alert("you win")
-        }else{
-            alert("you lose!")
-        }
-        break;
+         
+   if (includes.includes(cpu_array)){
+    alert('YOU WIN!')
+   }else{
+    alert ('YOU LOSE')
+   }
+  break;
+       
+        
     }
-    
-    
+   
 
 })
 
