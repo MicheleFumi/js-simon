@@ -105,12 +105,12 @@ button2.addEventListener('click', (event)=>{
      let array_of_value = [value1, value2, value3, value4, value5]
     console.log(array_of_value);
     console.log(cpu_array);
-    let win = true;
+   
     for (let i = 0; i < cpu_array.length; i++) {
-        let includes = array_of_value[i]
+        let guessed_number =parseInt(array_of_value[i])
 
          
-   if (includes.includes(cpu_array)){
+   if (cpu_array.includes(guessed_number)){
     alert('YOU WIN!')
    }else{
     alert ('YOU LOSE')
